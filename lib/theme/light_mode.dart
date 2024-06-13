@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 
 ThemeData lightMode = ThemeData(
   brightness: Brightness.light,
-  primaryColor: Colors.blue, // You can adjust the primary color as needed
-  secondaryHeaderColor: Colors.black87, // Darker color for contrast in light mode
+  primaryColor: Colors.blue,
+  secondaryHeaderColor: Colors.black87,
   textTheme: const TextTheme(
-    bodyLarge: TextStyle(color: Colors.black), // Black text for light background
+    bodyLarge: TextStyle(color: Colors.black),
   ),
-  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue).copyWith(
-    surface: Colors.white, // Typically a light color for surfaces in light mode
+  colorScheme: ColorScheme.fromSwatch(
+    primarySwatch: Colors.blue,
+    brightness: Brightness.light, // Ensure the brightness matches
+  ).copyWith(
+    surface: Colors.white,
   ),
 );
